@@ -1,0 +1,670 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intern Product Portal</title>
+    <meta
+      name="description"
+      content="Internal portal for the Product Lifecycle Framework, maturity model, and shared resources."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@400;500;600;700&family=Merriweather:wght@700;900&family=Space+Grotesk:wght@400;500;700&family=Syne:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="background-glow background-glow-left" aria-hidden="true"></div>
+    <div class="background-glow background-glow-right" aria-hidden="true"></div>
+
+    <div class="top-toolbar" role="region" aria-label="Sticky navigation and search">
+      <div class="container top-toolbar-inner">
+        <button
+          id="floating-nav-toggle"
+          class="floating-nav-toggle"
+          type="button"
+          aria-controls="floating-nav"
+          aria-expanded="false"
+        >
+          Navigation
+        </button>
+
+        <label class="content-search" for="content-search-input">
+          <span class="content-search-label">Search</span>
+          <input
+            id="content-search-input"
+            type="search"
+            placeholder="Search modules, outputs, templates..."
+            autocomplete="off"
+          />
+        </label>
+
+        <div class="content-search-actions">
+          <button id="content-search-next" class="content-search-next" type="button" hidden>
+            Next
+          </button>
+          <p id="content-search-status" class="content-search-status" aria-live="polite"></p>
+        </div>
+      </div>
+    </div>
+
+    <aside id="floating-nav" class="floating-nav is-collapsed" aria-label="Quick section navigation">
+      <div class="floating-nav-header">
+        <h2>Navigation</h2>
+      </div>
+      <nav>
+        <ul id="floating-nav-list" class="floating-nav-list"></ul>
+      </nav>
+    </aside>
+
+    <header class="site-header container fade-in">
+      <a href="#top" class="logo">Evidi<span>Internal</span></a>
+    </header>
+
+    <main id="top">
+      <section class="hero container">
+        <h1 class="hero-title reveal">
+          Product Lifecycle
+          <span>Framework</span>
+        </h1>
+
+        <div class="orbit-stage reveal" aria-label="Main circular menu">
+          <svg class="orbit-lines" viewBox="0 0 620 620" aria-hidden="true">
+            <circle cx="310" cy="310" r="236"></circle>
+            <circle cx="310" cy="310" r="168"></circle>
+            <path d="M310 74 L310 546 M74 310 L546 310"></path>
+          </svg>
+
+          <a class="orbit-center" href="#framework-philosophy">
+            <strong>Framework Philosophy</strong>
+          </a>
+
+          <a class="orbit-node node-1" href="#framework-model">Product Lifecycle Framework</a>
+          <a class="orbit-node node-2" href="#maturity-model">Maturity Model</a>
+          <a class="orbit-node node-3" href="#product-definition">Innovation Taxonomy</a>
+          <a class="orbit-node node-4" href="#framework-philosophy">Templates</a>
+        </div>
+      </section>
+
+      <section id="framework-philosophy" class="container section intro-section">
+        <h2 class="section-title reveal">Framework philosophy</h2>
+        <div class="intro-grid">
+          <article class="intro-card reveal">
+            <h3>Introduction to the Product Lifecycle Framework</h3>
+            <p>
+              The Product Lifecycle Framework is Evidi's common structure for managing,
+              developing, improving, and scaling products and services across their entire
+              lifecycle. It helps product teams, leaders, architects, consultants, and business
+              stakeholders understand where a product stands, which capabilities already exist,
+              and what is needed to reach a higher maturity level.
+            </p>
+            <p>
+              The framework creates a shared language for product management across the
+              organization and connects strategy, customer understanding, product development,
+              launch activities, operational governance, and long-term lifecycle management into
+              one coherent model.
+            </p>
+          </article>
+          <article class="intro-card reveal">
+            <h3>Understanding the structure</h3>
+            <p>
+              The center of the illustration represents the Product Management Framework itself.
+              Around it are the capability domains that enable successful product management.
+              The framework is divided into four perspectives: Product Planning, Product
+              Development, Product Introduction, and Product Life Cycle Management.
+            </p>
+            <p>
+              Supporting leadership and operational capabilities sit on the left side of the
+              model and ensure the organization has the governance, collaboration models, tools,
+              and competencies needed for product excellence over time.
+            </p>
+          </article>
+          <article class="intro-card reveal">
+            <h3>Intended use</h3>
+            <p>
+              Teams can use the framework to assess product maturity, identify capability gaps,
+              define improvement initiatives, align around product goals, support governance and
+              decision-making, improve cross-departmental collaboration, and create more
+              predictable product outcomes.
+            </p>
+            <p>
+              Leaders can use it to align investments and priorities, while product managers can
+              use it to structure work and clarify responsibilities across the lifecycle.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="product-definition" class="container section intro-section">
+        <h2 class="section-title reveal">Innovation taxonomy and classification</h2>
+        <p class="section-intro reveal">
+          Not every innovation we create should be managed as a product. In practice, innovation
+          appears in different forms with different ownership models, investment profiles, and
+          lifecycle expectations. To create clarity across teams, this portal introduces a working
+          taxonomy that helps classify initiatives before we assign product-level commitments.
+          Product is one possible destination, not the default destination.
+        </p>
+
+        <div class="taxonomy-map reveal" aria-label="Innovation taxonomy map">
+          <div class="taxonomy-origin" aria-hidden="true">Innovation</div>
+
+          <div class="taxonomy-categories" role="list" aria-label="Innovation categories">
+            <button class="taxonomy-category taxonomy-category-button" type="button" role="listitem" data-taxonomy-target="concept">
+              <span class="taxonomy-category-title">Concept</span>
+              <span class="taxonomy-category-action">Open definition</span>
+            </button>
+            <button class="taxonomy-category taxonomy-category-button" type="button" role="listitem" data-taxonomy-target="framework">
+              <span class="taxonomy-category-title">Framework</span>
+              <span class="taxonomy-category-action">Open definition</span>
+            </button>
+            <button class="taxonomy-category taxonomy-category-button" type="button" role="listitem" data-taxonomy-target="accelerator">
+              <span class="taxonomy-category-title">Accelerator</span>
+              <span class="taxonomy-category-action">Open definition</span>
+            </button>
+            <button class="taxonomy-category taxonomy-category-button" type="button" role="listitem" data-taxonomy-target="service">
+              <span class="taxonomy-category-title">Service</span>
+              <span class="taxonomy-category-action">Open definition</span>
+            </button>
+            <button class="taxonomy-category taxonomy-category-button" type="button" role="listitem" data-taxonomy-target="product">
+              <span class="taxonomy-category-title">Product</span>
+              <span class="taxonomy-category-action">Open definition</span>
+            </button>
+          </div>
+
+          <p class="taxonomy-map-note">Click a category to focus on the definition and commitments.</p>
+        </div>
+
+        <div id="taxonomy-overlay" class="taxonomy-overlay" hidden>
+          <div class="taxonomy-overlay-backdrop" data-taxonomy-close="true"></div>
+          <article class="taxonomy-overlay-panel" role="dialog" aria-modal="true" aria-labelledby="taxonomy-overlay-title">
+            <button id="taxonomy-overlay-close" class="taxonomy-overlay-close" type="button" aria-label="Close definition overlay">Close</button>
+            <h3 id="taxonomy-overlay-title" class="taxonomy-overlay-title"></h3>
+            <div id="taxonomy-overlay-content" class="taxonomy-overlay-content"></div>
+          </article>
+        </div>
+
+        <template id="taxonomy-template-concept">
+          <p>
+            A Concept is an early-stage description of an idea, hypothesis, or opportunity that
+            has not yet been industrialized. It is used to explore whether a direction is worth
+            pursuing before committing to product, service, or operational governance.
+          </p>
+          <p>
+            In this stage, the main objective is learning: clarifying the problem, validating
+            assumptions, and identifying potential value. A Concept should remain lightweight,
+            focused, and easy to refine as new insight appears.
+          </p>
+          <h4>Characteristics</h4>
+          <ul>
+            <li>Explores potential</li>
+            <li>Can be further developed</li>
+            <li>Does not carry product-level commitments</li>
+          </ul>
+          <h4>Mandatory commitments</h4>
+          <ul>
+            <li>Owner</li>
+            <li>Purpose and description</li>
+          </ul>
+          <h4>Examples</h4>
+          <ul>
+            <li>AI Copilot for a finance department</li>
+            <li>New data service</li>
+            <li>Innovation initiative</li>
+          </ul>
+          <p>
+            Use Concept when uncertainty is high and the organization needs evidence before making
+            larger commitments.
+          </p>
+        </template>
+
+        <template id="taxonomy-template-framework">
+          <p>
+            A Framework is a governance structure: a set of principles, roles, processes, and
+            decision mechanisms that defines how a domain should be managed.
+          </p>
+          <p>
+            Its purpose is not to deliver customer value directly, but to create consistency,
+            accountability, and quality across teams. A strong Framework improves decision speed,
+            clarifies ownership, and reduces variation in how critical work is performed.
+          </p>
+          <h4>Characteristics</h4>
+          <ul>
+            <li>Describes governance</li>
+            <li>Defines responsibilities and decision processes</li>
+            <li>Ensures consistency across the organization</li>
+          </ul>
+          <h4>Mandatory commitments</h4>
+          <ul>
+            <li>Process owner</li>
+            <li>Governance model</li>
+            <li>Documentation</li>
+            <li>Periodic review</li>
+          </ul>
+          <h4>Examples</h4>
+          <ul>
+            <li>Change Control Framework</li>
+            <li>Governance Framework</li>
+            <li>AI Governance Framework</li>
+          </ul>
+          <p>
+            Use Framework when multiple teams need a common operating model and clear governance
+            rules over time.
+          </p>
+        </template>
+
+        <template id="taxonomy-template-accelerator">
+          <p>
+            An Accelerator is a reusable artifact that reduces delivery time, cost, or risk when
+            implementing solutions. It is designed to improve execution efficiency across many
+            initiatives, not to act as a standalone commercial offering.
+          </p>
+          <p>
+            Accelerators create value indirectly by helping teams deliver faster and with higher
+            consistency. They can be technical assets, templates, or packaged implementation
+            patterns that remove repetitive effort.
+          </p>
+          <h4>Characteristics</h4>
+          <ul>
+            <li>Reused across multiple deliveries</li>
+            <li>Creates indirect customer value</li>
+            <li>Primarily used for efficiency</li>
+          </ul>
+          <h4>Mandatory commitments</h4>
+          <ul>
+            <li>Owner</li>
+            <li>Documentation</li>
+            <li>Minimum maintenance</li>
+            <li>Quality assurance</li>
+          </ul>
+          <h4>Examples</h4>
+          <ul>
+            <li>Data models</li>
+            <li>Integration packages</li>
+            <li>Infrastructure code</li>
+            <li>Agent libraries</li>
+          </ul>
+          <p>
+            Use Accelerator when the same implementation problem appears repeatedly and reuse can
+            materially improve quality and speed.
+          </p>
+        </template>
+
+        <template id="taxonomy-template-service">
+          <p>
+            A Service is value delivered through people, competencies, and execution activities.
+            Unlike a product, service value is primarily created during delivery and often requires
+            customer-specific tailoring.
+          </p>
+          <p>
+            Services are most effective when delivery methods are standardized, quality criteria
+            are clear, and capability development is actively managed. A mature service combines
+            expert execution with repeatable delivery structures.
+          </p>
+          <h4>Characteristics</h4>
+          <ul>
+            <li>Value is created through performed work</li>
+            <li>Requires resources per customer</li>
+            <li>Delivered through competence</li>
+          </ul>
+          <h4>Mandatory commitments</h4>
+          <ul>
+            <li>Service owner</li>
+            <li>Service description</li>
+            <li>Delivery model</li>
+            <li>Competence plan</li>
+            <li>Quality requirements</li>
+          </ul>
+          <h4>Examples</h4>
+          <ul>
+            <li>Advisory</li>
+            <li>Implementation</li>
+            <li>Managed services</li>
+            <li>Training</li>
+          </ul>
+          <p>
+            Use Service when customer value depends mainly on professional execution rather than a
+            reusable standalone solution.
+          </p>
+        </template>
+
+        <template id="taxonomy-template-product">
+          <p>
+            A Product is a standardized solution that delivers business value to a defined target
+            group and can be offered to multiple customers without substantial redesign.
+          </p>
+          <p>
+            Product status means long-term responsibility: clear ownership, prioritization,
+            lifecycle decisions, and measurable outcomes. A Product is expected to evolve over
+            time and remain coherent beyond single customer projects.
+          </p>
+          <h4>Characteristics</h4>
+          <ul>
+            <li>Solves a defined problem</li>
+            <li>Has a defined target audience</li>
+            <li>Can be priced and sold</li>
+            <li>Has a roadmap</li>
+            <li>Has a lifecycle</li>
+            <li>Can be evolved independently of single customers</li>
+          </ul>
+          <h4>Mandatory commitments</h4>
+          <ul>
+            <li>Product owner</li>
+            <li>Product strategy</li>
+            <li>Roadmap</li>
+            <li>Backlog</li>
+            <li>Documentation</li>
+            <li>Support model</li>
+            <li>Investment plan</li>
+            <li>Lifecycle management</li>
+          </ul>
+          <h4>Examples</h4>
+          <ul>
+            <li>SaaS solution</li>
+            <li>Data platform product</li>
+            <li>Industry-specific AI solution</li>
+          </ul>
+          <p>
+            Use Product when the organization is ready to commit to sustained ownership,
+            investment, and lifecycle governance for a repeatable offering.
+          </p>
+        </template>
+      </section>
+
+      <section id="idea-intake" class="container section idea-intake-section">
+        <h2 class="section-title reveal">Idea reflection wizard</h2>
+        <p class="section-intro reveal">
+          Do you have an idea that might be worth exploring for Evidi? This short wizard helps you
+          reflect on the idea through 10 questions, estimate which category it best fits, and
+          indicate how mature it is right now.
+        </p>
+
+        <div class="idea-intake-panel reveal">
+          <div class="idea-intake-copy">
+            <span class="idea-intake-kicker">From idea to internal review</span>
+            <h3>Let us help you shape the idea before it disappears in a notebook.</h3>
+            <p>
+              The wizard is designed to turn a rough thought into a more structured internal input.
+              It will estimate the most likely category, indicate maturity, and give the user a
+              clear summary before they choose whether to send it for internal review.
+            </p>
+            <ul class="idea-intake-points">
+              <li>10 short questions</li>
+              <li>Category recommendation</li>
+              <li>Maturity indication</li>
+              <li>Internal review confirmation flow</li>
+            </ul>
+          </div>
+
+          <div class="idea-intake-cta-card" aria-hidden="true">
+            <div class="idea-intake-cta-visual">
+              <span class="idea-pulse pulse-1"></span>
+              <span class="idea-pulse pulse-2"></span>
+              <span class="idea-pulse pulse-3"></span>
+              <strong>New idea</strong>
+            </div>
+            <button id="idea-wizard-launch" class="idea-wizard-launch" type="button">
+              Start the 10-question wizard
+            </button>
+          </div>
+        </div>
+
+        <div id="idea-wizard-modal" class="idea-wizard-modal" hidden>
+          <div class="idea-wizard-backdrop" data-idea-wizard-close="true"></div>
+          <article class="idea-wizard-dialog" role="dialog" aria-modal="true" aria-labelledby="idea-wizard-title">
+            <button
+              id="idea-wizard-close"
+              class="idea-wizard-close"
+              type="button"
+              aria-label="Close idea reflection wizard"
+            >
+              Close
+            </button>
+
+            <div class="idea-wizard-progress">
+              <span id="idea-wizard-step-label" class="idea-wizard-step-label">Question 1 of 10</span>
+              <div class="idea-wizard-progress-track" aria-hidden="true">
+                <span id="idea-wizard-progress-fill" class="idea-wizard-progress-fill"></span>
+              </div>
+            </div>
+
+            <div id="idea-wizard-question-stage" class="idea-wizard-stage">
+              <h3 id="idea-wizard-title" class="idea-wizard-title"></h3>
+              <p id="idea-wizard-help" class="idea-wizard-help"></p>
+              <div id="idea-wizard-input" class="idea-wizard-input"></div>
+            </div>
+
+            <div id="idea-wizard-summary-stage" class="idea-wizard-stage" hidden>
+              <h3 class="idea-wizard-title">Idea summary</h3>
+              <div id="idea-wizard-summary" class="idea-wizard-summary"></div>
+              <div class="idea-wizard-summary-actions">
+                <button id="idea-wizard-send" class="idea-wizard-primary" type="button">
+                  Send for internal review
+                </button>
+                <button id="idea-wizard-finish" class="idea-wizard-secondary" type="button">
+                  Keep for later
+                </button>
+              </div>
+            </div>
+
+            <div id="idea-wizard-confirm-stage" class="idea-wizard-stage" hidden>
+              <div class="idea-confirmation-visual" aria-hidden="true">
+                <span class="idea-burst burst-1"></span>
+                <span class="idea-burst burst-2"></span>
+                <span class="idea-burst burst-3"></span>
+                <span class="idea-burst burst-4"></span>
+                <strong>You are awesome</strong>
+              </div>
+              <h3 class="idea-wizard-title">Idea submitted for internal review</h3>
+              <p class="idea-wizard-help">
+                Thank you. Your idea summary is now ready for internal follow-up. This kind of
+                contribution helps Evidi explore more opportunities faster.
+              </p>
+              <button id="idea-wizard-done" class="idea-wizard-primary" type="button">
+                Finish
+              </button>
+            </div>
+
+            <div class="idea-wizard-actions">
+              <button id="idea-wizard-back" class="idea-wizard-secondary" type="button">
+                Previous
+              </button>
+              <button id="idea-wizard-next" class="idea-wizard-primary" type="button">
+                Next
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="framework-model" class="container section framework-workbench">
+        <h2 class="section-title reveal">Product Lifecycle Framework</h2>
+        <div class="framework-layout reveal" aria-label="Product lifecycle capability model">
+          <div class="framework-top-row">
+            <button type="button" class="framework-card tone-dark-mint is-active" data-title="Know the Customer" data-desc="Understand market needs" aria-pressed="true">
+              <span class="framework-card-title">Know the Customer</span>
+              <span class="framework-card-sub">Understand market needs</span>
+            </button>
+            <button type="button" class="framework-card tone-dark-mint" data-title="Size the Market Opportunity" data-desc="Gauge market attractiveness" aria-pressed="false">
+              <span class="framework-card-title">Size the Market Opportunity</span>
+              <span class="framework-card-sub">Gauge market attractiveness</span>
+            </button>
+            <button type="button" class="framework-card tone-dark-mint" data-title="Know the Competitors" data-desc="Know the competition" aria-pressed="false">
+              <span class="framework-card-title">Know the Competitors</span>
+              <span class="framework-card-sub">Know the competition</span>
+            </button>
+            <button type="button" class="framework-card tone-dark-mint" data-title="Create the Product Strategy" data-desc="Build strong roadmaps" aria-pressed="false">
+              <span class="framework-card-title">Create the Product Strategy</span>
+              <span class="framework-card-sub">Build strong roadmaps</span>
+            </button>
+            <button type="button" class="framework-card tone-dark-mint" data-title="Prioritize Product Investments" data-desc="Drive adoption and usage" aria-pressed="false">
+              <span class="framework-card-title">Prioritize Product Investments</span>
+              <span class="framework-card-sub">Drive adoption and usage</span>
+            </button>
+            <button type="button" class="framework-card tone-dark-mint" data-title="Differentiate Products" data-desc="Deliver unique value" aria-pressed="false">
+              <span class="framework-card-title">Differentiate Products</span>
+              <span class="framework-card-sub">Deliver unique value</span>
+            </button>
+            <button type="button" class="framework-card tone-dark-mint" data-title="Build Compelling CX" data-desc="Enhance the customer journey" aria-pressed="false">
+              <span class="framework-card-title">Build Compelling CX</span>
+              <span class="framework-card-sub">Enhance the customer journey</span>
+            </button>
+            <button type="button" class="framework-card tone-dark-mint" data-title="Accelerate Time to Market" data-desc="Improve development processes" aria-pressed="false">
+              <span class="framework-card-title">Accelerate Time to Market</span>
+              <span class="framework-card-sub">Improve development processes</span>
+            </button>
+          </div>
+
+          <div class="framework-phase-row" aria-hidden="true">
+            <h3 class="framework-phase">Product Planning</h3>
+            <h3 class="framework-phase">Product Development</h3>
+          </div>
+
+          <div class="framework-mid-row">
+            <div class="framework-side-stack framework-side-left">
+              <button type="button" class="framework-card tone-dark-mint" data-title="Improve Cross-Departmental Collab." data-desc="Manage strong communications" aria-pressed="false">
+                <span class="framework-card-title">Improve Cross-Departmental Collab.</span>
+                <span class="framework-card-sub">Manage strong communications</span>
+              </button>
+              <button type="button" class="framework-card tone-dark-mint" data-title="Invest in the Right Tools" data-desc="Adopt efficient management tools" aria-pressed="false">
+                <span class="framework-card-title">Invest in the Right Tools</span>
+                <span class="framework-card-sub">Adopt efficient management tools</span>
+              </button>
+              <button type="button" class="framework-card tone-dark-mint" data-title="Improve PM Approaches" data-desc="Manage maturity model" aria-pressed="false">
+                <span class="framework-card-title">Improve PM Approaches</span>
+                <span class="framework-card-sub">Manage maturity model</span>
+              </button>
+            </div>
+
+            <article class="framework-center-card" aria-label="Product Management Framework center">
+              <p class="center-side-label left">Product Leadership</p>
+              <div class="lifecycle-wheel" aria-hidden="true">
+                <span class="wheel-ring wheel-ring-outer"></span>
+                <span class="wheel-ring wheel-ring-inner"></span>
+                <span class="wheel-spoke spoke-1"></span>
+                <span class="wheel-spoke spoke-2"></span>
+                <span class="wheel-spoke spoke-3"></span>
+                <span class="wheel-spoke spoke-4"></span>
+                <span class="wheel-core"></span>
+              </div>
+              <p class="center-side-label right">Product Introduction</p>
+            </article>
+
+            <div class="framework-side-stack framework-side-right">
+              <button type="button" class="framework-card tone-dark-gray" data-title="Manage Product Launch" data-desc="Launch new offerings" aria-pressed="false">
+                <span class="framework-card-title">Manage Product Launch</span>
+                <span class="framework-card-sub">Launch new offerings</span>
+              </button>
+              <button type="button" class="framework-card tone-dark-gray" data-title="Communicate Product Value" data-desc="Create compelling messages" aria-pressed="false">
+                <span class="framework-card-title">Communicate Product Value</span>
+                <span class="framework-card-sub">Create compelling messages</span>
+              </button>
+              <button type="button" class="framework-card tone-dark-gray" data-title="Price Products" data-desc="Price to achieve business goals" aria-pressed="false">
+                <span class="framework-card-title">Price Products</span>
+                <span class="framework-card-sub">Price to achieve business goals</span>
+              </button>
+            </div>
+          </div>
+
+          <h3 class="framework-phase framework-phase-single">Product Life Cycle Management</h3>
+
+          <div class="framework-bottom-row">
+            <button type="button" class="framework-card tone-dark-mint" data-title="Measure Business Unit Performance" data-desc="Structure and measure for success" aria-pressed="false">
+              <span class="framework-card-title">Measure Business Unit Performance</span>
+              <span class="framework-card-sub">Structure and measure for success</span>
+            </button>
+            <button type="button" class="framework-card tone-dark-mint" data-title="Invest in Strong Teams" data-desc="Recruit talented resources" aria-pressed="false">
+              <span class="framework-card-title">Invest in Strong Teams</span>
+              <span class="framework-card-sub">Recruit talented resources</span>
+            </button>
+            <button type="button" class="framework-card tone-dark-gray" data-title="Optimize Life Cycle Events" data-desc="Manage critical in-life events" aria-pressed="false">
+              <span class="framework-card-title">Optimize Life Cycle Events</span>
+              <span class="framework-card-sub">Manage critical in-life events</span>
+            </button>
+            <button type="button" class="framework-card tone-dark-gray" data-title="Manage Innovation" data-desc="Manage resources efficiently" aria-pressed="false">
+              <span class="framework-card-title">Manage Innovation</span>
+              <span class="framework-card-sub">Manage resources efficiently</span>
+            </button>
+            <button type="button" class="framework-card tone-dark-gray" data-title="Harness Disruption" data-desc="Watch out for disruption" aria-pressed="false">
+              <span class="framework-card-title">Harness Disruption</span>
+              <span class="framework-card-sub">Watch out for disruption</span>
+            </button>
+            <button type="button" class="framework-card tone-dark-gray" data-title="Achieve Financial Objectives" data-desc="Grow revenue" aria-pressed="false">
+              <span class="framework-card-title">Achieve Financial Objectives</span>
+              <span class="framework-card-sub">Grow revenue</span>
+            </button>
+            <button type="button" class="framework-card tone-dark-gray" data-title="Collaborate to Drive Business" data-desc="Work with marketing and sales" aria-pressed="false">
+              <span class="framework-card-title">Collaborate to Drive Business</span>
+              <span class="framework-card-sub">Work with marketing and sales</span>
+            </button>
+            <button type="button" class="framework-card tone-dark-gray" data-title="Package Products" data-desc="Align packaging to strategy" aria-pressed="false">
+              <span class="framework-card-title">Package Products</span>
+              <span class="framework-card-sub">Align packaging to strategy</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="capability-details" class="container section capability-details">
+        <h2 class="section-title reveal">Framework modules</h2>
+        <div id="capability-sections-list" class="capability-sections-list"></div>
+      </section>
+
+      <section id="maturity-model" class="container section maturity-model-section">
+        <h2 class="section-title reveal">Maturity model</h2>
+        <p class="section-intro reveal">
+          Each module has a maximum of 5 points. The score per checklist item is calculated as
+          5 divided by the number of checklist points in that module. The spider-web updates live
+          as outputs are checked. Click a phase in the score panel to expand the modules inside it.
+          The chart is split into four color-coded phases to make the relationship between scores
+          and the diagram easier to read. Phase maturity is evaluated against target scores and
+          critical outputs, not only by total coverage.
+        </p>
+
+        <div class="maturity-model-layout reveal">
+          <article class="maturity-chart-panel" aria-label="Maturity radar chart">
+            <div class="maturity-kpi-row">
+              <div class="maturity-kpi">
+                <span class="maturity-kpi-label">Current points</span>
+                <strong id="maturity-current-points">0.00</strong>
+              </div>
+              <div class="maturity-kpi">
+                <span class="maturity-kpi-label">Maximum points</span>
+                <strong id="maturity-max-points">0.00</strong>
+              </div>
+              <div class="maturity-kpi">
+                <span class="maturity-kpi-label maturity-kpi-label-secondary">Overall coverage</span>
+                <strong id="maturity-percent" class="maturity-kpi-secondary-value">0%</strong>
+              </div>
+            </div>
+
+            <div id="maturity-phase-overview" class="maturity-phase-overview"></div>
+
+            <svg
+              id="maturity-radar"
+              class="maturity-radar"
+              viewBox="0 0 760 760"
+              role="img"
+              aria-label="Spider web model with module maturity scores"
+            ></svg>
+          </article>
+
+          <aside class="maturity-scores-panel" aria-label="Phase maturity">
+            <h3>Phase maturity</h3>
+            <div id="maturity-phase-list" class="maturity-phase-list"></div>
+          </aside>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="container site-footer fade-in">
+      <p>© <span id="year"></span> Evidi</p>
+      <a href="#top">Back to top</a>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
